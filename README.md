@@ -4,8 +4,9 @@
 Project was developed and tested locally with the following software installed:
 
 ```
+go 1.19
 docker >v4.2.0
-grpcurl > v1.8.7
+grpcurl >v1.8.7
 minikube >v1.27.0
 kubernetes >1.25.1
 kubectl >v1.14 (req for native kustomise support)
