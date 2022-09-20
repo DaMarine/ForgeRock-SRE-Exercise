@@ -1,0 +1,28 @@
+syntax = "proto3";
+option go_package = "../internal/api/v1/stock";
+
+// The greeting service definition.
+service Ticker {
+    // GET the average price of a stock over a period of time
+    rpc getAvgPrice (StockRequest) returns (StockResponse) {}
+  }
+  
+  // Empty obj for source code forward compatibility in all cases
+  message StockRequest {
+  }
+  
+  // Response msg containing stock symbol data over requested period of time, with avg closing price for those days
+  message StockResponse {
+    double avgClosePrice = 1;
+    repeated DailyData dailyData = 2;
+  }
+  
+  // Daily data for a given stock symbol
+  message DailyData {
+    string date = 1;
+    double open = 2;
+    double high = 3;
+    double low = 4;
+    double close = 5;
+    int32 volume = 6;
+  }

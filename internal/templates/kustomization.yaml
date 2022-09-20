@@ -1,0 +1,6 @@
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+- name: stock-ticker-apikey
+  literals:
+  - apikey=C227WD9W3LUVKVV9
